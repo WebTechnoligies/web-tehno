@@ -1,65 +1,102 @@
 body{
 font-family: Arial, sans-serif;
-background-color: #f4f4f4;
-text-align: center;
+background-color:#f4f4f4;
+margin:0;
+text-align:center;
 }
 
+/* Header */
 header{
-background-color: black;
-color: white;
-padding: 15px;
+background-color:#000;
+color:white;
+padding:20px;
 }
 
+/* Navigation Bar */
 nav{
-margin: 15px;
+background:#333;
+padding:10px;
 }
 
 nav a{
-text-decoration: none;
-background-color: blue;
-color: white;
-padding: 8px 15px;
-margin: 5px;
-border-radius: 5px;
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
 }
 
 nav a:hover{
-background-color: darkblue;
+color:yellow;
 }
 
-table{
-margin: auto;
-border-collapse: collapse;
-width: 60%;
-background: white;
+/* Product Section */
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:20px;
 }
 
-th{
-background-color: #333;
-color: white;
-padding: 10px;
+/* Product Card */
+.card{
+background:white;
+width:220px;
+margin:15px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+transition:transform 0.3s;
 }
 
-td{
-padding: 10px;
-border: 1px solid #ddd;
+.card:hover{
+transform:scale(1.05);
 }
 
+/* Product Image */
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* Product Title */
+.card h3{
+margin:10px 0;
+}
+
+/* Product Description */
+.card p{
+font-size:14px;
+color:#555;
+}
+
+/* Price */
+.card h4{
+color:green;
+margin:8px 0;
+}
+
+/* Button */
 button{
-background-color: green;
-color: white;
-border: none;
-padding: 6px 12px;
-cursor: pointer;
+background:green;
+color:white;
+border:none;
+padding:8px 15px;
+cursor:pointer;
+border-radius:5px;
+font-size:14px;
 }
 
 button:hover{
-background-color: darkgreen;
+background:darkgreen;
 }
 
+/* Footer */
 footer{
-margin-top: 20px;
-padding: 10px;
-background-color: black;
-color: white;
+background:black;
+color:white;
+padding:12px;
+margin-top:20px;
 }
