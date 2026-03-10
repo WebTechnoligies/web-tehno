@@ -1,18 +1,16 @@
 body{
-font-family: Arial, sans-serif;
-background-color:#f4f4f4;
+font-family:Arial;
+background:#f4f4f4;
 margin:0;
 text-align:center;
 }
 
-/* Header */
 header{
-background-color:#000;
+background:black;
 color:white;
 padding:20px;
 }
 
-/* Navigation Bar */
 nav{
 background:#333;
 padding:10px;
@@ -20,83 +18,73 @@ padding:10px;
 
 nav a{
 color:white;
+margin:10px;
 text-decoration:none;
-margin:15px;
-font-size:18px;
 font-weight:bold;
 }
 
-nav a:hover{
-color:yellow;
+.search-box{
+margin:20px;
 }
 
-/* Product Section */
+.search-box input{
+padding:10px;
+width:250px;
+}
+
 .products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 padding:20px;
 }
 
-/* Product Card */
 .card{
 background:white;
-width:220px;
-margin:15px;
 padding:15px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-transition:transform 0.3s;
+box-shadow:0 0 10px gray;
 }
 
-.card:hover{
-transform:scale(1.05);
-}
-
-/* Product Image */
 .card img{
 width:100%;
 height:150px;
 object-fit:cover;
-border-radius:8px;
 }
 
-/* Product Title */
-.card h3{
-margin:10px 0;
+.rating{
+color:orange;
 }
 
-/* Product Description */
-.card p{
-font-size:14px;
-color:#555;
-}
-
-/* Price */
-.card h4{
-color:green;
-margin:8px 0;
-}
-
-/* Button */
 button{
 background:green;
 color:white;
 border:none;
 padding:8px 15px;
 cursor:pointer;
-border-radius:5px;
-font-size:14px;
 }
 
-button:hover{
-background:darkgreen;
+table{
+margin:auto;
+background:white;
+border-collapse:collapse;
 }
 
-/* Footer */
-footer{
-background:black;
-color:white;
-padding:12px;
-margin-top:20px;
+th,td{
+border:1px solid #ccc;
+padding:10px;
+}
+
+.contact{
+width:300px;
+margin:auto;
+background:white;
+padding:20px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+margin:10px 0;
+padding:8px;
 }
