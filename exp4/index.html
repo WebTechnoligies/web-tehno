@@ -9,202 +9,182 @@
 
 <header>
 <h1>Accessories Store</h1>
-<p>Best Tech Accessories Online</p>
+<p>Best Tech Accessories</p>
 </header>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="index.html">Products</a>
-<a href="cart.html">Cart 🛒</a>
+<a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a>
 <a href="contact.html">Contact</a>
 </nav>
 
 <div class="search-box">
-<input type="text" placeholder="Search Products...">
+<input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
 </div>
 
 <h2>Our Products</h2>
 
-<div class="products">
+<div class="products" id="product-list">
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?smartwatch">
+<img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400">
 <h3>Smart Watch</h3>
 <p>Fitness smartwatch</p>
-<div class="rating">⭐⭐⭐⭐</div>
 <h4>₹2500</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Smart Watch')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?headphones">
-<h3>Wireless Headphones</h3>
-<p>Noise cancelling</p>
-<div class="rating">⭐⭐⭐⭐⭐</div>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400">
+<h3>Headphones</h3>
+<p>Wireless headphones</p>
 <h4>₹1800</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Headphones')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?sunglasses">
+<img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400">
 <h3>Sunglasses</h3>
 <p>UV protection</p>
-<div class="rating">⭐⭐⭐⭐</div>
 <h4>₹900</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Sunglasses')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?phonecase">
-<h3>Phone Case</h3>
-<p>Shockproof</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹300</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?speaker">
-<h3>Bluetooth Speaker</h3>
-<p>Portable speaker</p>
-<div class="rating">⭐⭐⭐⭐⭐</div>
-<h4>₹1500</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?powerbank">
-<h3>Power Bank</h3>
-<p>10000mAh battery</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹1200</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?usb-cable">
-<h3>USB Cable</h3>
-<p>Fast charging</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹250</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?earbuds">
-<h3>Wireless Earbuds</h3>
-<p>High quality audio</p>
-<div class="rating">⭐⭐⭐⭐⭐</div>
-<h4>₹2200</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?laptop-bag">
-<h3>Laptop Bag</h3>
-<p>Water resistant</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹1300</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?gaming-mouse">
+<img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400">
 <h3>Gaming Mouse</h3>
-<p>RGB precision</p>
-<div class="rating">⭐⭐⭐⭐</div>
+<p>RGB gaming mouse</p>
 <h4>₹950</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Gaming Mouse')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?keyboard">
+<img src="https://images.unsplash.com/photo-1518444028785-8f6f04f3e2b2?w=400">
 <h3>Keyboard</h3>
 <p>USB keyboard</p>
-<div class="rating">⭐⭐⭐⭐</div>
 <h4>₹800</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Keyboard')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?mousepad">
-<h3>Mouse Pad</h3>
-<p>Smooth gaming pad</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹350</h4>
-<button>Add to Cart</button>
+<img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=400">
+<h3>Bluetooth Speaker</h3>
+<p>Portable speaker</p>
+<h4>₹1500</h4>
+<button onclick="addToCart('Speaker')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?phone-stand">
-<h3>Phone Holder</h3>
-<p>Adjustable stand</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹400</h4>
-<button>Add to Cart</button>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400">
+<h3>Power Bank</h3>
+<p>10000mAh battery</p>
+<h4>₹1200</h4>
+<button onclick="addToCart('Power Bank')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?car-charger">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400">
+<h3>Wireless Earbuds</h3>
+<p>High quality audio</p>
+<h4>₹2200</h4>
+<button onclick="addToCart('Earbuds')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400">
+<h3>Laptop Bag</h3>
+<p>Water resistant bag</p>
+<h4>₹1300</h4>
+<button onclick="addToCart('Laptop Bag')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400">
+<h3>USB Cable</h3>
+<p>Fast charging cable</p>
+<h4>₹250</h4>
+<button onclick="addToCart('USB Cable')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606220838315-056192d5e927?w=400">
 <h3>Car Charger</h3>
-<p>Fast charging</p>
-<div class="rating">⭐⭐⭐⭐</div>
+<p>Fast charging adapter</p>
 <h4>₹600</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Car Charger')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?fitness-band">
-<h3>Fitness Band</h3>
-<p>Track health</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹1700</h4>
-<button>Add to Cart</button>
+<img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=400">
+<h3>Phone Holder</h3>
+<p>Adjustable mobile stand</p>
+<h4>₹400</h4>
+<button onclick="addToCart('Phone Holder')">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="https://source.unsplash.com/200x200/?tripod">
-<h3>Tripod</h3>
-<p>Flexible tripod</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹850</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?ringlight">
-<h3>LED Ring Light</h3>
-<p>Video lighting</p>
-<div class="rating">⭐⭐⭐⭐⭐</div>
-<h4>₹1400</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?webcam">
-<h3>Webcam</h3>
-<p>HD webcam</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹2000</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?tablet-cover">
-<h3>Tablet Cover</h3>
-<p>Protective case</p>
-<div class="rating">⭐⭐⭐⭐</div>
-<h4>₹700</h4>
-<button>Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://source.unsplash.com/200x200/?portable-fan">
+<img src="https://images.unsplash.com/photo-1586952518485-11b180e92764?w=400">
 <h3>Portable Fan</h3>
 <p>Rechargeable mini fan</p>
-<div class="rating">⭐⭐⭐⭐</div>
 <h4>₹500</h4>
-<button>Add to Cart</button>
+<button onclick="addToCart('Portable Fan')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592890288564-76628a30a657?w=400">
+<h3>Fitness Band</h3>
+<p>Track health activity</p>
+<h4>₹1700</h4>
+<button onclick="addToCart('Fitness Band')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400">
+<h3>Tripod Stand</h3>
+<p>Flexible tripod</p>
+<h4>₹850</h4>
+<button onclick="addToCart('Tripod')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400">
+<h3>Ring Light</h3>
+<p>Perfect video lighting</p>
+<h4>₹1400</h4>
+<button onclick="addToCart('Ring Light')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400">
+<h3>Webcam</h3>
+<p>HD webcam</p>
+<h4>₹2000</h4>
+<button onclick="addToCart('Webcam')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606813902917-9cfd1b6e1f6b?w=400">
+<h3>Mouse Pad</h3>
+<p>Smooth gaming pad</p>
+<h4>₹350</h4>
+<button onclick="addToCart('Mouse Pad')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587614203976-365c74645e83?w=400">
+<h3>Tablet Cover</h3>
+<p>Protective cover</p>
+<h4>₹700</h4>
+<button onclick="addToCart('Tablet Cover')">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589000051054-d4b5fbcbb8f8?w=400">
+<h3>LED Desk Lamp</h3>
+<p>Adjustable LED light</p>
+<h4>₹1100</h4>
+<button onclick="addToCart('Desk Lamp')">Add to Cart</button>
 </div>
 
 </div>
@@ -212,6 +192,41 @@
 <footer>
 <p>© 2026 Accessories Store</p>
 </footer>
+
+<script>
+
+let cartCount = 0;
+
+function addToCart(product){
+
+cartCount++;
+
+document.getElementById("cart-count").innerText = cartCount;
+
+alert(product + " added to cart");
+
+}
+
+function searchProduct(){
+
+let input = document.getElementById("search").value.toLowerCase();
+
+let cards = document.getElementsByClassName("card");
+
+for(let i=0;i<cards.length;i++){
+
+let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+
+if(title.includes(input))
+cards[i].style.display="block";
+else
+cards[i].style.display="none";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
