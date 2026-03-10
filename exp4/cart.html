@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cart</title>
-<link rel="stylesheet" href="style.css">
+<title>Shopping Cart</title>
+
+<script>
+
+function loadCart(){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cartItems = document.getElementById("cartItems");
+
+let total = 0;
+
+cartItems.innerHTML = "";
+
+cart.forEach(function(item){
+
+let li = document.createElement("li");
+
+li.innerHTML = item.name + " - ₹" + item.price;
+
+cartItems.appendChild(li);
+
+total = total + item.price;
+
+});
+
+document.getElementById("total").innerHTML = "Total: ₹" + total;
+
+}
+
+function clearCart(){
+
+localStorage.removeItem("cart");
+
+loadCart();
+
+}
+
+</script>
+
 </head>
 
-<body>
+<body onload="loadCart()">
 
-<header>
-<h1>Your Cart</h1>
-</header>
+<h1>Your Shopping Cart</h1>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="index.html">Products</a>
-<a href="cart.html">Cart</a>
-<a href="contact.html">Contact</a>
-</nav>
+<ul id="cartItems"></ul>
 
-<table>
-<tr>
-<th>Product</th>
-<th>Price</th>
-<th>Quantity</th>
-</tr>
+<h2 id="total"></h2>
 
-<tr>
-<td>Smart Watch</td>
-<td>₹2500</td>
-<td>1</td>
-</tr>
+<button onclick="clearCart()">Clear Cart</button>
 
-<tr>
-<td>Headphones</td>
-<td>₹1800</td>
-<td>1</td>
-</tr>
+<br><br>
 
-</table>
-
-<h3>Total: ₹4300</h3>
+<a href="exp4.html">Back to Products</a>
 
 </body>
 </html>
